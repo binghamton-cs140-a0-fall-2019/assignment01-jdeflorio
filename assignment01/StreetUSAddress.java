@@ -60,7 +60,7 @@ public class StreetUSAddress {
 	 */	
 	public String getZipCode() {
     // TODO return the appropriate String
-    return zip
+    return zip;
 	}
 	@Override
 	public String toString() {
