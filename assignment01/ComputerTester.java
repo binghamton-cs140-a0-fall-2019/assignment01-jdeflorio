@@ -29,6 +29,18 @@ public class ComputerTester {
 		//Copy all your lines above, add an extra "2" to every variable name
 		// and replace every System.out.print or System.out.println
 		// by output.print or output.println
+
+		Computer comp12 = new Computer("Dell", "intel i5", 8, 500, true, 1000.00);
+		Computer comp22 = new Computer("HP", "intel i7", 16, 1500, false, 2000.00);
+		Computer comp32 = new Computer("Lenovo", "AMD", 4, 250, true, 500.00);
+		Computer comp42 = new Computer("Asus", "AMD", 32, 2000, false, 1500);
+
+		output.println(comp12);
+		output.println(comp22);
+		output.println(comp32);
+		output.println(comp42);
+ 
+     
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
