@@ -18,6 +18,27 @@ public class PlaceDOBTester {
 		System.out.println(dob4);
 		System.out.println(dob5);
 
+		System.out.println(dob1.olderThan(dob4));
+		System.out.println("should print false");
+		System.out.println(dob1.olderThan(dob3));
+		System.out.println("should print true");
+
+		System.out.println(dob1.youngerThan(dob4));
+		System.out.println("should print true");
+		System.out.println(dob1.youngerThan(dob3));
+		System.out.println("should print false");
+
+		System.out.println(dob1.hasSameBirthDateAs(dob2));
+		System.out.println("should print true");
+		System.out.println(dob1.hasSameBirthDateAs(dob4));
+		System.out.println("should print false");
+
+		System.out.println(dob1.hasSameBirthDayAs(dob3));
+		System.out.println("should print true");
+		System.out.println(dob1.hasSameBirthDayAs(dob4));
+		System.out.println("should print false");
+
+
 		try(var output =new PrintWriter(new FileOutputStream(
 			    new File("output.txt"), true /* true means append to file */))) {
 			output.println("\nTESTS FOR DateAndPlaceOfBirth.java:");
@@ -32,11 +53,32 @@ public class PlaceDOBTester {
 		DateAndPlaceOfBirth dob42 = new DateAndPlaceOfBirth(1997, 5, 21, "Florence", "Italy");
 		DateAndPlaceOfBirth dob52 = new DateAndPlaceOfBirth(1960, 8, 12, "Havana", "Cuba");
 
-		System.out.println(dob12);
-		System.out.println(dob22);
-		System.out.println(dob32);
-		System.out.println(dob42);
-		System.out.println(dob52);
+		output.println(dob12);
+		output.println(dob22);
+		output.println(dob32);
+		output.println(dob42);
+		output.println(dob52);
+
+		output.println(dob12.olderThan(dob42));
+		output.println("should print false");
+		output.println(dob12.olderThan(dob32));
+		output.println("should print true");
+
+		output.println(dob12.youngerThan(dob42));
+		output.println("should print true");
+		output.println(dob12.youngerThan(dob32));
+		output.println("should print false");
+
+		output.println(dob12.hasSameBirthDateAs(dob22));
+		output.println("should print true");
+		output.println(dob12.hasSameBirthDateAs(dob42));
+		output.println("should print false");
+
+		output.println(dob12.hasSameBirthDayAs(dob32));
+		output.println("should print true");
+		output.println(dob12.hasSameBirthDayAs(dob42));
+		output.println("should print false");
+
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
