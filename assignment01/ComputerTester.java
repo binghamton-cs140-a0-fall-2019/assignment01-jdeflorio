@@ -11,6 +11,15 @@ public class ComputerTester {
 	//Then call System.out.println(comp); for each "comp" object
 	//and observe that there are small differences in how the computer
 	//information prints out.
+		Computer comp1 = new Computer("Dell", "intel i5", 8, 500, true, 1000.00);
+		Computer comp2 = new Computer("HP", "intel i7", 16, 1500, false, 2000.00);
+		Computer comp3 = new Computer("Lenovo", "AMD", 4, 250, true, 500.00);
+		Computer comp4 = new Computer("Asus", "AMD", 32, 2000, false, 1500);
+
+		System.out.println(comp1);
+		System.out.println(comp2);
+		System.out.println(comp3);
+		System.out.println(comp4);
  
      
 		try(var output =new PrintWriter(new FileOutputStream(
